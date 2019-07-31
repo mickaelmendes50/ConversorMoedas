@@ -34,7 +34,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             if ("".equals(value)) {
                 Toast.makeText(this, this.getString(R.string.informe_valor), Toast.LENGTH_LONG).show();
             } else {
+                Double real = Double.valueOf(value);
 
+                this.mViewHoler.textDolar.setText(String.format("%.2f", (real/4)));
+                this.mViewHoler.textEuro.setText(String.format("%.2f", (real/5)));
             }
         }
     }
